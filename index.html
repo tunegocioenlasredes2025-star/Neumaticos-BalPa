@@ -7,15 +7,15 @@
 <meta name="description" content="Neumáticos BalPa, Av. Hipólito Yrigoyen 683, Morón. Alineación 3D, balanceo, rotación, escáner y tren delantero. 5,0 en Google. Tel. 011 6258-2181.">
 <!-- Demo de TNR para mostrarle al dueño: no se indexa hasta que la contrate. -->
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#12305c">
+<meta name="theme-color" content="#33383d">
 <link rel="icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --azul:#12305c; --azul-2:#1d4681; --azul-3:#0c2244; --azul-suave:#e8eef7;
-  --coral:#e4572e; --coral-2:#f47a55; --coral-suave:#fdeee8;
+  --grafito:#33383d; --grafito-2:#474e56; --grafito-3:#22262a; --grafito-suave:#eceef1;
+  --rojo:#e63329; --rojo-2:#f2564a; --rojo-suave:#fdeceb;
   --papel:#f5f6f8; --papel-2:#ffffff; --borde:#d8dce4;
   --tinta:#161a21; --tinta-2:#5a6373; --tinta-3:#8c94a3;
   --wa:#25d366;
@@ -30,9 +30,9 @@ a{color:inherit}
 h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.02;text-transform:uppercase;letter-spacing:.005em}
 h2{font-size:clamp(32px,5.2vw,52px)}
 section{padding:76px 0}
-.rotulo{display:inline-flex;align-items:center;gap:9px;font-family:var(--titulo);font-weight:600;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:12px}
-.rotulo::before{content:'';width:26px;height:3px;background:var(--coral);border-radius:2px}
-.oscuro .rotulo{color:#ffb499}
+.rotulo{display:inline-flex;align-items:center;gap:9px;font-family:var(--titulo);font-weight:600;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--rojo);margin-bottom:12px}
+.rotulo::before{content:'';width:26px;height:3px;background:var(--rojo);border-radius:2px}
+.oscuro .rotulo{color:#ffa79f}
 
 /* ---------- botones ---------- */
 .bt{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--titulo);font-weight:700;font-size:19px;letter-spacing:.05em;text-transform:uppercase;padding:14px 26px;border-radius:4px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .14s,background .14s,color .14s;line-height:1.1}
@@ -40,75 +40,79 @@ section{padding:76px 0}
 .bt svg{width:20px;height:20px;flex:none}
 .bt-wa{background:var(--wa);color:#04210e}
 .bt-wa:hover{background:#3ae57b}
-.bt-coral{background:var(--coral);color:#fff}
-.bt-coral:hover{background:var(--coral-2)}
-.bt-borde{border-color:var(--azul);color:var(--azul)}
-.bt-borde:hover{background:var(--azul);color:#fff}
+.bt-coral{background:var(--rojo);color:#fff}
+.bt-coral:hover{background:var(--rojo-2)}
+.bt-borde{border-color:var(--grafito);color:var(--grafito)}
+.bt-borde:hover{background:var(--grafito);color:#fff}
 .oscuro .bt-borde{border-color:#ffffff55;color:#fff}
-.oscuro .bt-borde:hover{background:#fff;color:var(--azul)}
+.oscuro .bt-borde:hover{background:#fff;color:var(--grafito)}
 
 /* ---------- barra superior ---------- */
 .top{position:sticky;top:0;z-index:40;background:#f5f6f8f0;backdrop-filter:blur(10px);border-bottom:1px solid var(--borde)}
 .top .caja{display:flex;align-items:center;justify-content:space-between;gap:16px;height:66px}
 .marca{display:flex;align-items:center;gap:11px;text-decoration:none}
-.sigla{width:44px;height:44px;border-radius:50%;background:var(--azul);color:#fff;font-family:var(--titulo);font-weight:700;font-size:20px;display:grid;place-items:center;flex:none;letter-spacing:.02em}
+.sigla{width:44px;height:44px;border-radius:50%;background:var(--grafito);color:#fff;font-family:var(--titulo);font-weight:700;font-size:20px;display:grid;place-items:center;flex:none;letter-spacing:.02em}
 .marca b{display:block;font-family:var(--titulo);font-weight:700;font-size:21px;text-transform:uppercase;line-height:1;letter-spacing:.02em}
 .marca small{display:block;font-size:12.5px;color:var(--tinta-3);margin-top:2px}
 .nav{display:flex;gap:24px;font-size:15.5px;font-weight:600}
 .nav a{text-decoration:none;color:var(--tinta-2)}
-.nav a:hover{color:var(--coral)}
+.nav a:hover{color:var(--rojo)}
 .top .bt{padding:10px 18px;font-size:17px}
 
 /* ---------- portada ---------- */
 .portada{background:var(--papel-2);border-bottom:1px solid var(--borde);padding:56px 0 0;position:relative;overflow:hidden}
 .portada .caja{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;padding-bottom:56px}
 .portada h1{font-size:clamp(40px,6.6vw,74px);max-width:12ch}
-.portada h1 em{font-style:normal;color:var(--coral)}
+.portada h1 em{font-style:normal;color:var(--rojo)}
 .bajada{color:var(--tinta-2);font-size:clamp(17px,1.9vw,19.5px);max-width:520px;margin:18px 0 26px}
 .botones{display:flex;flex-wrap:wrap;gap:12px}
 
 /* tarjeta de reseña */
-.tarjeta-5{background:var(--azul);color:#fff;border-radius:18px;padding:30px 28px;position:relative;box-shadow:0 34px 60px -30px #12305c88}
+.tarjeta-5{background:var(--grafito);color:#fff;border-radius:18px;padding:30px 28px;position:relative;box-shadow:0 34px 60px -30px #22262aaa}
 .tarjeta-5::after{content:'';position:absolute;inset:10px;border:1px solid #ffffff22;border-radius:12px;pointer-events:none}
 .tarjeta-5 .n{font-family:var(--titulo);font-weight:700;font-size:clamp(78px,13vw,120px);line-height:.82;letter-spacing:.01em}
-.tarjeta-5 .est{color:#ffc34d;font-size:26px;letter-spacing:5px;display:block;margin-top:6px}
-.tarjeta-5 .txt{margin-top:18px;font-size:16.5px;color:#cddaeb;line-height:1.5}
-.tarjeta-5 .pie{margin-top:18px;padding-top:16px;border-top:1px solid #ffffff26;font-size:14px;color:#9fb4ce;display:flex;align-items:center;gap:8px}
+.tarjeta-5 .est{color:#ffc94d;font-size:26px;letter-spacing:5px;display:block;margin-top:6px}
+.tarjeta-5 .txt{margin-top:18px;font-size:16.5px;color:#d5d8dc;line-height:1.5}
+.tarjeta-5 .pie{margin-top:18px;padding-top:16px;border-top:1px solid #ffffff26;font-size:14px;color:#9ba1a8;display:flex;align-items:center;gap:8px}
 .tarjeta-5 .pie svg{width:17px;height:17px;flex:none}
 
 /* ---------- franja ---------- */
-.franja{background:var(--azul-3);color:#fff}
+.franja{background:var(--grafito-3);color:#fff}
 .franja ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr)}
 .franja li{padding:22px 24px;border-left:1px solid #ffffff1f;display:flex;gap:14px;align-items:center}
 .franja li:first-child{border-left:0;padding-left:0}
-.franja .ic{width:40px;height:40px;border-radius:10px;background:#ffffff14;color:#ffb499;display:grid;place-items:center;flex:none}
+.franja .ic{width:40px;height:40px;border-radius:10px;background:#ffffff14;color:#ffa79f;display:grid;place-items:center;flex:none}
 .franja .ic svg{width:21px;height:21px}
 .franja strong{display:block;font-family:var(--titulo);font-weight:700;font-size:21px;text-transform:uppercase;line-height:1.1}
-.franja span{display:block;font-size:14px;color:#9fb4ce;margin-top:2px}
+.franja span{display:block;font-size:14px;color:#9ba1a8;margin-top:2px}
 
 /* ---------- qué hacemos ---------- */
 .cabeza{display:grid;grid-template-columns:1fr .85fr;gap:28px;align-items:end;margin-bottom:34px}
 .cabeza p{color:var(--tinta-2);font-size:17.5px}
 .filas{display:grid;gap:12px}
 .fila-serv{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;background:var(--papel-2);border:1px solid var(--borde);border-radius:12px;padding:20px 22px;transition:border-color .15s,transform .15s}
-.fila-serv:hover{border-color:var(--coral);transform:translateX(4px)}
-.fila-serv .num{font-family:var(--titulo);font-weight:700;font-size:38px;color:var(--azul-suave);line-height:1;-webkit-text-stroke:1px var(--azul);color:transparent}
+.fila-serv:hover{border-color:var(--rojo);transform:translateX(4px)}
+.fila-serv .num{font-family:var(--titulo);font-weight:700;font-size:38px;color:var(--grafito-suave);line-height:1;-webkit-text-stroke:1px var(--grafito);color:transparent}
 .fila-serv h3{font-size:25px;letter-spacing:.01em}
 .fila-serv p{color:var(--tinta-2);font-size:16px;margin-top:3px;line-height:1.45}
-.fila-serv .flecha{color:var(--coral);font-size:26px;line-height:1}
-.aviso{margin-top:22px;background:var(--coral-suave);border:1px solid #f0bfae;border-radius:12px;padding:16px 18px;color:#7d3018;font-size:16px}
+.fila-serv .flecha{color:var(--rojo);font-size:26px;line-height:1}
+.aviso{margin-top:22px;background:var(--rojo-suave);border:1px solid #f0b6b1;border-radius:12px;padding:16px 18px;color:#7d211b;font-size:16px}
 .aviso b{display:block;font-family:var(--titulo);font-weight:700;font-size:19px;text-transform:uppercase;margin-bottom:3px;letter-spacing:.02em}
 
+.foto-ancha{margin-top:22px;border-radius:14px;overflow:hidden;border:1px solid var(--borde);background:var(--papel-2)}
+.foto-ancha img{width:100%;height:auto;display:block}
+.foto-ancha figcaption{padding:13px 18px;font-size:15px;color:var(--tinta-2);background:var(--papel-2)}
+
 /* ---------- síntomas ---------- */
-.sintomas{background:var(--azul);color:#fff}
+.sintomas{background:var(--grafito);color:#fff}
 .sintomas h2{max-width:16ch}
-.sintomas > .caja > p.lead{color:#cddaeb;font-size:18px;max-width:58ch;margin:14px 0 34px}
+.sintomas > .caja > p.lead{color:#d5d8dc;font-size:18px;max-width:58ch;margin:14px 0 34px}
 .grilla-sint{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .sint{background:#ffffff0f;border:1px solid #ffffff1f;border-radius:14px;padding:22px 20px}
-.sint .ic{width:44px;height:44px;border-radius:12px;background:var(--coral);color:#fff;display:grid;place-items:center;margin-bottom:14px}
+.sint .ic{width:44px;height:44px;border-radius:12px;background:var(--rojo);color:#fff;display:grid;place-items:center;margin-bottom:14px}
 .sint .ic svg{width:22px;height:22px}
 .sint h3{font-size:22px;margin-bottom:7px;letter-spacing:.01em}
-.sint p{color:#b9c9de;font-size:15.5px;line-height:1.45}
+.sint p{color:#b6bcc3;font-size:15.5px;line-height:1.45}
 
 /* ---------- consulta ---------- */
 .consulta{background:var(--papel-2);border-block:1px solid var(--borde)}
@@ -117,7 +121,7 @@ section{padding:76px 0}
 .pasos{list-style:none;counter-reset:p;display:grid;gap:0}
 .pasos li{display:grid;grid-template-columns:46px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--borde)}
 .pasos li:last-child{border-bottom:1px solid var(--borde)}
-.pasos li::before{counter-increment:p;content:counter(p);font-family:var(--titulo);font-weight:700;font-size:30px;color:var(--coral);line-height:1}
+.pasos li::before{counter-increment:p;content:counter(p);font-family:var(--titulo);font-weight:700;font-size:30px;color:var(--rojo);line-height:1}
 .pasos strong{display:block;font-size:17px}
 .pasos span{color:var(--tinta-2);font-size:15.5px}
 .formu{background:var(--papel);border:1px solid var(--borde);border-radius:16px;padding:26px 24px}
@@ -128,41 +132,45 @@ section{padding:76px 0}
 .formu label{display:grid;gap:6px;font-family:var(--titulo);font-weight:600;font-size:14.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--tinta-2)}
 .formu input,.formu select,.formu textarea{width:100%;background:#fff;border:1.5px solid var(--borde);color:var(--tinta);border-radius:8px;padding:12px;font-family:var(--texto);font-size:16px;letter-spacing:0;text-transform:none;font-weight:500}
 .formu textarea{resize:vertical;min-height:74px}
-.formu input:focus,.formu select:focus,.formu textarea:focus{outline:none;border-color:var(--azul);box-shadow:0 0 0 3px #12305c26}
-.vista{margin:18px 0 16px;background:var(--azul-3);color:#fff;border-radius:10px;padding:14px 16px;font-size:15.5px;line-height:1.45;min-height:74px}
-.vista b{display:block;font-family:var(--titulo);font-weight:600;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;color:#ffb499;margin-bottom:5px}
+.formu input:focus,.formu select:focus,.formu textarea:focus{outline:none;border-color:var(--grafito);box-shadow:0 0 0 3px #33383d33}
+.vista{margin:18px 0 16px;background:var(--grafito-3);color:#fff;border-radius:10px;padding:14px 16px;font-size:15.5px;line-height:1.45;min-height:74px}
+.vista b{display:block;font-family:var(--titulo);font-weight:600;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;color:#ffa79f;margin-bottom:5px}
 .formu .bt{width:100%}
 .formu .bt + .bt{margin-top:10px}
 .formu small{display:block;text-align:center;color:var(--tinta-3);font-size:13.5px;margin-top:12px}
 
 /* ---------- dónde ---------- */
+.frente{margin-top:20px;border-radius:14px;overflow:hidden;border:1px solid var(--borde);position:relative}
+.frente img{width:100%;height:auto;display:block}
+.frente figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;
+  background:linear-gradient(transparent,#16181bee);color:#fff;font-size:15px}
 .donde .caja{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:stretch}
-.mapa{border-radius:14px;overflow:hidden;min-height:380px;border:1px solid var(--borde);background:var(--azul-suave)}
+.mapa{border-radius:14px;overflow:hidden;min-height:380px;border:1px solid var(--borde);background:var(--grafito-suave)}
 .mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
 .info{display:grid;gap:12px;align-content:start;margin-top:20px}
 .info .fila{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;background:var(--papel-2);border:1px solid var(--borde);border-radius:12px;padding:14px 16px}
-.info .ic{width:42px;height:42px;border-radius:10px;background:var(--azul-suave);color:var(--azul);display:grid;place-items:center}
+.info .ic{width:42px;height:42px;border-radius:10px;background:var(--grafito-suave);color:var(--grafito);display:grid;place-items:center}
 .info .ic svg{width:21px;height:21px}
 .info b{display:block;font-family:var(--titulo);font-weight:600;font-size:13.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--tinta-3);margin-bottom:2px}
-.info a{font-weight:600;text-decoration:none;color:var(--azul)}
+.info a{font-weight:600;text-decoration:none;color:var(--grafito)}
 
 /* ---------- cierre ---------- */
-.cierre{background:var(--coral);color:#fff;padding:72px 0;position:relative;overflow:hidden}
+.cierre{background:var(--rojo);color:#fff;padding:72px 0;position:relative;overflow:hidden}
 .cierre::before{content:'5,0';position:absolute;right:-1%;top:50%;translate:0 -50%;font-family:var(--titulo);font-weight:700;font-size:clamp(200px,32vw,420px);color:#ffffff1f;line-height:.8;pointer-events:none}
 .cierre .caja{position:relative}
 .cierre h2{font-size:clamp(32px,5.4vw,58px);max-width:17ch}
-.cierre p{font-size:18.5px;margin:12px 0 26px;max-width:50ch;color:#ffe4da}
-.cierre .bt-azul{background:var(--azul);color:#fff}
-.cierre .bt-azul:hover{background:var(--azul-2)}
+.cierre p{font-size:18.5px;margin:12px 0 26px;max-width:50ch;color:#ffe0dd}
+.cierre .bt-grafito{background:var(--grafito);color:#fff}
+.cierre .bt-grafito:hover{background:var(--grafito-2)}
 .cierre .bt-borde{border-color:#ffffff88;color:#fff}
-.cierre .bt-borde:hover{background:#fff;color:var(--coral)}
+.cierre .bt-borde:hover{background:#fff;color:var(--rojo)}
 
-footer{background:var(--azul-3);color:#9fb4ce;padding:28px 0 32px;font-size:14.5px}
+footer{background:var(--grafito-3);color:#9ba1a8;padding:28px 0 32px;font-size:14.5px}
 footer .caja{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
 footer .marca b{color:#fff}
-footer .marca small{color:#9fb4ce}
-footer .sigla{background:#fff;color:var(--azul)}
-footer a{color:#cddaeb;text-decoration:none}
+footer .marca small{color:#9ba1a8}
+footer .sigla{background:#fff;color:var(--grafito)}
+footer a{color:#d5d8dc;text-decoration:none}
 
 /* barra fija del celular */
 .barra{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;grid-template-columns:1fr auto;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#ffffffee;backdrop-filter:blur(10px);border-top:1px solid var(--borde)}
@@ -202,7 +210,7 @@ footer a{color:#cddaeb;text-decoration:none}
   <div class="caja">
     <a class="marca" href="#">
       <span class="sigla">BP</span>
-      <span><b>Neumáticos BalPa</b><small>Gomería y taller · Morón</small></span>
+      <span><b>Neumáticos BalPa</b><small>Confianza sobre ruedas · Morón</small></span>
     </a>
     <nav class="nav" aria-label="Secciones">
       <a href="#servicios">Qué hacemos</a>
@@ -264,8 +272,6 @@ footer a{color:#cddaeb;text-decoration:none}
         <p>Si el auto entra por una cubierta y aparece otra cosa, lo vemos acá mismo. Contanos qué
           te pasa y te decimos si lo podemos resolver.</p>
       </div>
-      <!-- Los servicios de abajo salen de las publicaciones de su propio Instagram @balpa.neumaticos.
-           DUDA: que el dueño confirme uno por uno, y que diga con qué marcas de neumáticos trabaja. -->
       <div class="filas">
         <article class="fila-serv">
           <span class="num">01</span>
@@ -298,10 +304,14 @@ footer a{color:#cddaeb;text-decoration:none}
           <span class="flecha" aria-hidden="true">→</span>
         </article>
       </div>
+      <figure class="foto-ancha">
+        <img src="img/taller.jpg" alt="Interior del taller de Neumáticos BalPa: autos sobre la rampa de alineación y stock de cubiertas" loading="lazy" width="1400" height="840">
+        <figcaption>El taller por dentro: rampa de alineación, equipo de balanceo y stock de cubiertas.</figcaption>
+      </figure>
       <div class="aviso">
         <b>¿No aparece lo que buscás?</b>
         Llamanos al 011 6258-2181 o escribinos y te decimos si lo podemos resolver nosotros.
-        Así no hacés el viaje al pedo.
+        Así no hacés el viaje al cuete.
       </div>
     </div>
   </section>
@@ -402,12 +412,15 @@ footer a{color:#cddaeb;text-decoration:none}
       <div>
         <div class="rotulo">Dónde estamos</div>
         <h2>Av. H. Yrigoyen 683, Morón</h2>
+        <figure class="frente">
+          <img src="img/frente.jpg" alt="Frente de Neumáticos BalPa en Av. Hipólito Yrigoyen 683, con el cartel rojo y el portón abierto" loading="lazy" width="1400" height="791">
+          <figcaption>Buscá el cartel rojo y el <b>683</b> en la puerta.</figcaption>
+        </figure>
         <div class="info">
           <div class="fila"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2C20 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <div><b>Dirección</b>Av. Hipólito Yrigoyen 683, Morón (B1708)<br><a href="https://www.google.com/maps/search/?api=1&query=Neum%C3%A1ticos+BalPa+Av.+Hip%C3%B3lito+Yrigoyen+683+Mor%C3%B3n" target="_blank" rel="noopener">Cómo llegar →</a></div></div>
           <div class="fila"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
             <div><b>Teléfono</b><a href="tel:+541162582181">011 6258-2181</a></div></div>
-          <!-- Horarios tomados de la ficha de Google y de su Instagram (coinciden). Confirmar con el dueño. -->
           <div class="fila"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
             <div><b>Horarios</b>Lunes a viernes de 8 a 19 · Sábados de 8 a 17 · Domingos cerrado</div></div>
           <div class="fila"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></div>
@@ -422,7 +435,7 @@ footer a{color:#cddaeb;text-decoration:none}
       <h2>Cinco estrellas no se consiguen de casualidad</h2>
       <p>Se consiguen atendiendo bien, de a un auto por vez. Escribinos y contanos qué necesitás.</p>
       <div class="botones">
-        <a class="bt bt-azul" href="#consulta">Escribir por WhatsApp</a>
+        <a class="bt bt-grafito" href="#consulta">Escribir por WhatsApp</a>
         <a class="bt bt-borde" href="tel:+541162582181">Llamar al 6258-2181</a>
       </div>
     </div>
@@ -447,7 +460,6 @@ footer a{color:#cddaeb;text-decoration:none}
 
 <script>
 // Arma el mensaje de WhatsApp con lo que completó la persona.
-// DUDA: confirmar si el 011 6258-2181 tiene WhatsApp. Si no, se saca el botón.
 (function () {
   var f = document.getElementById('formu');
   var out = document.getElementById('vistaTxt');
